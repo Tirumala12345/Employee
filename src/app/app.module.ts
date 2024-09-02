@@ -5,21 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { EmployeelistComponent } from './employeelist/employeelist.component';
-import { HttpClientModule } from '@angular/common/http';
 import { EmployeeformComponent } from './employeeform/employeeform.component';
 import { FormsModule } from '@angular/forms';
+import { AccountComponent } from './account/account.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateatmComponent } from './createatm/createatm.component';
+import { TransferComponent } from './transfer/transfer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeelistComponent,
-    EmployeeformComponent
+    EmployeeformComponent,
+    AccountComponent,
+    CreateatmComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
