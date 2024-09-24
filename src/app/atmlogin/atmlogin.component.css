@@ -1,27 +1,15 @@
 /* Style for the container holding the form */
-.container-fluid {
-    padding: 20px; /* Add padding around the container */
-    max-width: 800px; /* Limit the maximum width of the form */
+.container {
+    padding: 20px; /* Padding around the container */
+    max-width: 500px; /* Limit the width of the form */
     margin: 0 auto; /* Center the container horizontally */
     background-color: #f8f9fa; /* Light background color */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Style for the heading */
-.heading {
-    font-size: 24px; /* Font size for the heading */
-    margin-bottom: 20px; /* Space below the heading */
-    color: #333; /* Dark text color */
-}
-
-/* Style for form groups */
-.form-group {
-    margin-bottom: 15px; /* Space between form groups */
-}
-
 /* Style for labels */
-.form-group label {
+.container label {
     display: block; /* Block display for labels */
     font-weight: bold; /* Bold text for labels */
     margin-bottom: 5px; /* Space below the label */
@@ -29,13 +17,21 @@
 }
 
 /* Style for input fields */
-.form-group input {
+.container input[type="text"] {
     width: 100%; /* Full width of the container */
-    padding: 8px; /* Padding inside the input field */
+    padding: 10px; /* Padding inside the input field */
     border: 1px solid #ced4da; /* Border color */
     border-radius: 4px; /* Rounded corners */
     font-size: 16px; /* Font size inside the input field */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 15px; /* Space below the input fields */
+}
+
+/* Optional: Style for input fields on focus */
+.container input[type="text"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Subtle shadow on focus */
 }
 
 /* Style for the submit button */
@@ -48,6 +44,8 @@
     font-size: 16px; /* Font size for button text */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
+    display: block; /* Ensure the button is a block element */
+    margin-top: 10px; /* Space above the button */
 }
 
 /* Hover effect for the submit button */
@@ -55,8 +53,13 @@
     background-color: #0056b3; /* Darker blue background on hover */
 }
 
-/* Style for the custom address component */
-app-address {
-    display: block; /* Ensure the component is displayed as a block element */
-    margin-bottom: 20px; /* Space below the address component */
+/* Style for alert messages */
+.alert {
+    margin-top: 15px; /* Space above the alert message */
+    padding: 10px; /* Padding inside the alert message */
+    background-color: #f8d7da; /* Light red background for error messages */
+    color: #721c24; /* Dark red text color for error messages */
+    border: 1px solid #f5c6cb; /* Light red border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size inside the alert message */
 }

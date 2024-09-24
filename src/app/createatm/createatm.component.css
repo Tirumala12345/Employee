@@ -1,0 +1,42 @@
+/* General styles for the form container */
+.form-group {
+    margin-bottom: 15px; /* Spacing between form groups */
+    padding: 10px; /* Padding around the form group */
+    border: 1px solid #ddd; /* Border around the form group */
+    border-radius: 5px; /* Rounded corners for the border */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Style for the form label */
+.form-group label {
+    display: block; /* Make label block level for better alignment */
+    font-weight: bold; /* Make the label text bold */
+    margin-bottom: 5px; /* Space below the label */
+    color: #333; /* Dark text color for the label */
+}
+
+/* Style for the input field */
+.form-group input[type="text"] {
+    width: 100%; /* Full width of the container */
+    padding: 8px; /* Padding inside the input field */
+    border: 1px solid #ccc; /* Light border for the input field */
+    border-radius: 4px; /* Rounded corners for the input field */
+    box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+}
+
+/* Style for the submit button */
+.form-group button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color for the button */
+    font-size: 16px; /* Font size for the button text */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect for the button */
+.form-group button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}

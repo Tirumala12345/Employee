@@ -1,0 +1,39 @@
+/* Style for the container holding the form */
+.container-fluid {
+    padding: 20px; /* Padding around the container */
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Style for labels */
+.form-group label {
+    display: block; /* Block display for labels */
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 5px; /* Space below the label */
+    color: #333; /* Dark text color */
+}
+
+/* Style for input fields */
+.form-control {
+    width: 100%; /* Full width of the container */
+    padding: 8px; /* Padding inside the input field */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size inside the input field */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Optional: Style for input fields on focus */
+.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Subtle shadow on focus */
+}

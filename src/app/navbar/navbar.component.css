@@ -1,0 +1,44 @@
+/* Style for the navigation container */
+nav {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 20px; /* Padding around the navigation links */
+    border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+    display: flex; /* Use flexbox to align links horizontally */
+    gap: 15px; /* Space between links */
+}
+
+/* Style for each link */
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Link color */
+    font-size: 16px; /* Font size for links */
+    padding: 8px 12px; /* Padding inside the links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    display: inline-block; /* Ensure padding and margin are applied correctly */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+    color: #0056b3; /* Darker link color on hover */
+}
+
+/* Active link style (manual class application) */
+nav a.active {
+    background-color: #007bff; /* Background color for active link */
+    color: #fff; /* Text color for active link */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center-align links */
+    }
+
+    nav a {
+        margin: 10px 0; /* Spacing between stacked links */
+        display: block; /* Stack links vertically */
+    }
+}

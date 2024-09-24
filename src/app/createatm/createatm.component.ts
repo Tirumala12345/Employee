@@ -16,7 +16,8 @@ export class CreateatmComponent {
     mobilenumber: '',
     pan: '',
     balance: 0,
-    accountNumber: ''
+    accountNumber: '',
+    address: undefined
   }
 
   atm:Atm={
@@ -38,7 +39,6 @@ export class CreateatmComponent {
         console.error('Failed to create atm',error );
       }
     )
-
   }
-
+  
 }

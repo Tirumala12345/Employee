@@ -1,0 +1,14 @@
+<div class="container">
+
+    <label for="cardNumber">ATM Card Number</label> 
+    <input type="text" name="cardNumber"  [(ngModel)]="atm.cardnumber">
+
+    <label for="pin">ATM Pin</label> 
+    <input type="text" name="pin"  [(ngModel)]="atm.pin">
+
+    <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+
+    <div *ngIf="message" class="alert">
+        {{ message }}
+      </div>
+</div> 

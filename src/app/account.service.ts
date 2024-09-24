@@ -9,10 +9,11 @@ import { Observable } from 'rxjs';
 export class AccountService {
 
   constructor(private http:HttpClient) { }
-  private apiUrl = 'http://localhost:8081/createAccount';
+  private apiUrl = 'http://localhost:8081/cdcreateAccount/usingUI';
 
   createAccount(account:any):Observable<any>{
     console.log("From service" + JSON.stringify(account));
+    
     const httpOptions ={
       headers: new HttpHeaders({
          'Content-Type': 'application/json',
