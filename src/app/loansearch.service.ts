@@ -9,11 +9,38 @@ export class LoansearchService {
 
   constructor(private http:HttpClient) { }
 
-  searchAccount(accountnumber:any,pan:any):Observable<any>{
+  searchAccount(accountNumber:any):Observable<any>{
 
     const httpOptions = {
       headers: new HttpHeaders({
-        'accountinput':accountnumber,
+        'accountinput':accountNumber,
+        'Content-Type':'application/json',
+        'Accept':'application/json'
+        
+      })
+    };
+  
+    return this.http.get("http://localhost:8081/api/searchAccount/Jpa",httpOptions)
+  }
+
+  searchaccountbystatusCode(accountNumber:any):Observable<any>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'accountinput':accountNumber,
+        'Content-Type':'application/json',
+        'Accept':'application/json'
+        
+      })
+    };
+    return this.http.get("http://localhost:8081/api/searchAccount/AddressStatusJpql",httpOptions)
+  }
+
+
+  searchAccountPan(accountNumber:any,pan:any):Observable<any>{
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'accountinput':accountNumber,
         "paninput":pan,
         'Content-Type':'application/json',
         'Accept':'application/json'
@@ -21,10 +48,11 @@ export class LoansearchService {
       })
     };
   
-    return this.http.get("http://localhost:8081/api/searchAccount/Datajpapanjpql",httpOptions)
+    return this.http.get("http://localhost:8081/api/searchAccount/Datajpa",httpOptions)
   }
 
   searchAccountByBalance(balance:any):Observable<any>{
+
     const httpOptions = {
       headers: new HttpHeaders({
         'balanceinput':balance,

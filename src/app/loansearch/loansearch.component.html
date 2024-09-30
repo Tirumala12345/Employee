@@ -1,13 +1,37 @@
 <div>
-  <label for="accountnumber">Account Number</label>
-  <input type=" text" name="accountnumber"
-  placeholder="Enter AccountNumber"    [(ngModel)] ="accountnumber">
+  <label for="accountNumber">Account Number</label>
+  <input type=" text" name="accountNumber"
+  placeholder="Enter AccountNumber"    [(ngModel)] ="accountNumber">
+  <button (click)="searchaccount()" > Search Account  </button>
+</div>
+
+<br>
+
+<div>
+  <label for="accountNumber">Account Number</label>
+  <input type=" text" name="accountNumber"
+  placeholder="Enter AccountNumber"    [(ngModel)] ="accountNumber">
+
+  <!-- <label for="statusCode">Status Code</label>
+  <input type=" text" name="statusCode"
+  placeholder="Enter status Code"    [(ngModel)] ="statusCode"> -->
+  <button (click)="searchaccountbystatusCode()" > Search Account By status Code  </button>
+</div>
+
+<br>
+
+<div>
+  <label for="accountNumber">Account Number</label>
+  <input type=" text" name="accountNumber"
+  placeholder="Enter AccountNumber"    [(ngModel)] ="accountNumber">
 
   <label for="pan">Pan Number</label>
   <input type=" text" name="pan"
   placeholder="Enter Pan Number"    [(ngModel)] ="pan">
-  <button (click)="searchaccount()" > Search Account   </button>
+  <button (click)="searchaccountPan()" > Search Account By Pan  </button>
 </div>
+
+<br>
 
   <div>
     <label for="balance">Balance</label>
@@ -17,6 +41,8 @@
     <button (click)="searchAccountByBalance()" > Search Account By Balance    </button>
   </div>
 
+  <br>
+
   <div>
     <label for="balanceAmount">Balance</label>
     <input type=" text" name="balanceAmount"
@@ -24,6 +50,8 @@
   
     <button (click)="searchAccountByBalanceGreater()" > Search Account By Balance Greater    </button>
   </div>
+
+  <br>
 
   <div>
     <label for="lowerRange">Lower Range</label>
@@ -37,15 +65,21 @@
     <button (click)="searchAccountByBalanceRange()" > Search Account By Balance Range    </button>
   </div>
 
+<br>
+
   <div>
     <label>Search Account With Balance Null</label>
     <button (click)="searchAccountWithBalanceNull()" > Search Account With Balance Null    </button>
   </div>
 
+  <br>
+
   <div>
     <label>Search Account With Balance  Not Null</label>
     <button (click)="searchAccountWithBalanceNotNull()" > Search Account With Balance Not Null    </button>
   </div>
+
+<br>
 
   <div>
     <label for="balance">Balance</label>

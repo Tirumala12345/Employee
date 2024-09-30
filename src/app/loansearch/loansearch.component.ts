@@ -8,18 +8,36 @@ import { GridReadyEvent } from 'ag-grid-community';
   styleUrl: './loansearch.component.css'
 })
 export class LoansearchComponent {
-  accountnumber:string='';
+  accountNumber:string='';
   pan:string='';
   balance:number=0;
   balanceAmount:number=0;
   accounts: any[] = [];
   lowerRange!: number;
   upperRange!: number;
+  statusCode:number=0;
 
   constructor(private loansearch:LoansearchService){}
-    searchaccount(){
-      console.log("Inpu Account Number" +this.accountnumber);
-      this.loansearch.searchAccount(this.accountnumber,this.pan).subscribe(
+  searchaccount(){
+    console.log("Inpu Account Number" +this.accountNumber);
+    this.loansearch.searchAccount(this.accountNumber).subscribe(
+      data =>  {
+    console.log(" search Account" +JSON.stringify(data));
+      }
+    )
+  }
+
+  searchaccountbystatusCode(){
+    this.loansearch.searchaccountbystatusCode(this.accountNumber).subscribe(
+      data =>{
+        console.log(" search Account By Status" +JSON.stringify(data));
+      }
+    )
+  }
+
+  searchaccountPan(){
+      console.log("Inpu Account Number" +this.accountNumber);
+      this.loansearch.searchAccountPan(this.accountNumber,this.pan).subscribe(
         data =>  {
       console.log(" search Account" +JSON.stringify(data));
         }
